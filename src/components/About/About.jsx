@@ -14,32 +14,32 @@ const About = () => {
       title: "Satisfied Clients",
       value: "120+",
       icon: <Users className="w-8 h-8 text-green-500" />,
-      delay:0.2,
+      delay: 0.2,
     },
     {
       id: 2,
       title: "Projects Running",
       value: "8",
       icon: <PlayCircle className="w-8 h-8 text-yellow-500" />,
-      delay:0.3,
+      delay: 0.3,
     },
     {
       id: 3,
       title: "Projects Completed",
       value: "75+",
       icon: <CheckCircle className="w-8 h-8 text-blue-500" />,
-      delay:0.4,
+      delay: 0.4,
     },
     {
       id: 4,
       title: "Years Experience",
       value: "2+",
       icon: <Award className="w-8 h-8 text-purple-500" />,
-      delay:0.5,
+      delay: 0.5,
     },
   ];
   return (
-    <div className="relative overflow-hidden py-12">
+    <div className="relative overflow-hidden py-20">
       <div className="max-w-7xl   mx-auto min-h-screen flex flex-col justify-center">
         {/* Purple Glow - Bottom Right */}
         <div className="absolute -bottom-28 z-20 -left-[15%]  w-96 h-96 bg-purple-500 opacity-40 rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2" />
@@ -70,7 +70,7 @@ const About = () => {
               largeTextColor="text-[#34276817]"
               smallTextColor="text-white/70"
               largeTextSize="text-[120px]"
-              smallTextSize="text-3xl"
+              smallTextSize="text-3xl "
             />
           </FadeContent>
         </div>
@@ -154,20 +154,21 @@ const About = () => {
             </div>
           </FadeContent>
           <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
-            {stats.map(({ id, title, value, icon,delay }) => (
+            {stats.map(({ id, title, value, icon, delay }) => (
               <div className="z-30" key={id}>
-                <AnimatedContent  delay={delay} className="z-30">
-                <div className="bg-gradient-to-br from-primary/30 to-background p-6  rounded-xl shadow-lg flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
-                  <div className="mb-4">{icon}</div>
-                  <h3 className="text-3xl font-bold text-white">{value}</h3>
-                  <p className="text-white/70 mt-2 text-sm">{title}</p>
-                </div>
-              </AnimatedContent>
+                <AnimatedContent delay={delay} className="z-30">
+                  <div className="bg-gradient-to-br from-primary/30 to-background p-6  rounded-xl shadow-lg flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
+                    <div className="mb-4">{icon}</div>
+                    <h3 className="text-3xl font-bold text-white">{value}</h3>
+                    <p className="text-white/70 mt-2 text-sm">{title}</p>
+                  </div>
+                </AnimatedContent>
               </div>
             ))}
           </div>
         </div>
       </div>
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#0e051a] to-transparent z-20 pointer-events-none" />
     </div>
   );
 };
