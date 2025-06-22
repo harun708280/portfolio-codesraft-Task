@@ -1,9 +1,10 @@
+import Nav from '@/components/shared/Nav';
 import React from 'react';
 
 const Layout = () => {
     return (
-        <div>
-            <h1 className='text-purple-600'>Layout</h1>
+        <div className='bg-background  min-h-screen'>
+            <Nav/>
         </div>
     );
 };
