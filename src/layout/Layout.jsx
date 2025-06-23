@@ -1,4 +1,5 @@
 import About from "@/components/About/About";
+import Education from "@/components/Education/Education";
 import AnimatedCard from "@/components/service/AnimatedCard";
 import Service from "@/components/service/Service";
 import Nav from "@/components/shared/Nav";
@@ -8,12 +9,13 @@ import React from "react";
 
 const Layout = () => {
   return (
-    <div className="bg-background  min-h-screen">
+    <div className="min-h-screen bg-background">
       <Nav />
       <Home />
       <About />\
       <Service />
       <Skills/>
+      <Education/>
     </div>
   );
 };

@@ -3,6 +3,7 @@ import { Code, Server, Layers, PenTool, Link2, Zap } from "lucide-react";
 import DualTextEffect from "../shared/DualTextEffect.";
 import { SkillCard } from "./SkillCard";
 import { motion } from "framer-motion";
+import { ShineBorder } from "../magicui/shine-border";
 const Skills = () => {
   const skillData = [
     {
@@ -40,15 +41,15 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className=" min-h-screen flex flex-col justify-center relative overflow-hidden py-20 "
+      className="relative flex flex-col justify-center min-h-screen py-20 pb-40 overflow-hidden "
     >
 
-      <div className="max-w-7xl   mx-auto">
+      <div className="mx-auto max-w-7xl">
         <div className="absolute -bottom-28 z-20 -left-[15%]  w-96 h-96 bg-purple-500 opacity-40 rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2" />
         <motion.img
           src="star.png"
           alt="Star Bottom Right"
-          className="absolute -bottom-3 z-10 left-2 w-56 h-56"
+          className="absolute z-10 w-56 h-56 -bottom-3 left-2"
           animate={{
             rotate: [360, 0],
             y: [0, -10, 0, 10, 0],
@@ -69,17 +70,17 @@ const Skills = () => {
             <DualTextEffect
               largeText="SKILLS"
               smallText="Skills"
-              largeTextColor="text-[#3a2a5e18]"
-              smallTextColor="text-white"
-              largeTextSize="text-[40px] md:text-[80px] lg:text-[100px]"
-              smallTextSize="text-lg md:text-2xl lg:text-[40px]"
+              largeTextColor="text-[#34276817]"
+              smallTextColor="text-white/70"
+              largeTextSize="text-[120px]"
+              smallTextSize="text-3xl "
             />
           </div>
 
           {/* Skills & Description section */}
-          <div className="flex  flex-col lg:flex-row justify-between gap-10 mt-12">
+          <div className="flex flex-col justify-between gap-10 mt-12 lg:flex-row">
             {/* Left: Skills */}
-            <div className="w-full lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid w-full grid-cols-1 gap-6 lg:w-2/3 sm:grid-cols-2">
               {skillData.map((skill, index) => (
                 <div
                   key={index}
@@ -87,18 +88,20 @@ const Skills = () => {
                   data-aos-delay={index * 100}
                   className="bg-[#1a0f2c] border border-white/10 p-5 rounded-lg shadow hover:shadow-lg transition-all duration-300"
                 >
+                    
                   <div className="flex items-center gap-2 mb-2">
+                    
                     {skill.icon}
                     <h3 className="text-lg font-semibold text-white">
                       {skill.title}
                     </h3>
-                    <p className="text-right text-sm mt-1 text-white/70">
+                    <p className="mt-1 text-sm text-right text-white/70">
                       {skill.percentage}%
                     </p>
                   </div>
-                  <div className="w-full h-3 bg-white/10 rounded-full overflow-hidden">
+                  <div className="w-full h-3 overflow-hidden rounded-full bg-white/10">
                     <div
-                      className="h-full bg-purple-500 rounded-full transition-all duration-500"
+                      className="h-full transition-all duration-500 bg-purple-500 rounded-full"
                       style={{ width: `${skill.percentage}%` }}
                     ></div>
                   </div>
@@ -107,18 +110,18 @@ const Skills = () => {
             </div>
 
             {/* Right: Title & Description */}
-            <div className="w-full lg:w-1/2 flex flex-col justify-center items-start ">
-              <h2 className="text-4xl font-semibold mb-4 text-white">
+            <div className="flex flex-col items-start justify-center w-full lg:w-1/2 ">
+              <h2 className="mb-4 text-4xl font-semibold text-white">
                 Let Explore Popular Skills and Experience
               </h2>
-              <p className="text-white/70 leading-relaxed text-sm">
+              <p className="text-sm leading-relaxed text-white/70">
                 I combine modern UI/UX design with scalable frontend and backend
                 technologies to build complete, optimized, and user-friendly web
                 applications. Whether it's a single-page app or full-stack
                 system, I focus on performance, accessibility, and clean code
                 architecture.
               </p>
-              <button className=" mt-5 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-md transition duration-300">
+              <button className="px-4 py-2 mt-5 text-sm text-white transition duration-300 bg-purple-600 rounded-md hover:bg-purple-700">
                 Learn More
               </button>
             </div>
