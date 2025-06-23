@@ -1,4 +1,5 @@
 
+import BlurText from "../motion/BlurText";
 import ContactFrom from "./ContactFrom";
 import ContactInfo from "./ContactInfo";
 
@@ -13,7 +14,14 @@ export default function ContactSection() {
           className="mb-12 text-center"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-[#ffffff] mb-4">
-            Have Any Questions?
+            
+                      <BlurText
+          text="Have Any Questions?"
+          delay={150}
+          animateBy="words"
+          direction="top"
+          className="flex justify-center mb-8 text-3xl font-bold text-center"
+        />
           </h2>
           <p className="text-base text-[#A4A4A4] max-w-2xl mx-auto ">
             Are you interested in working together? I&apos;d love to hear about

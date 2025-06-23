@@ -2,6 +2,7 @@ import About from "@/components/About/About";
 import Blog from "@/components/Blog/Blog";
 import Contact from "@/components/contact/Contact";
 import Education from "@/components/Education/Education";
+import NewsLatter from "@/components/NewsLatter/NewsLatter";
 import Project from "@/components/Project/Project";
 import AnimatedCard from "@/components/service/AnimatedCard";
 import Service from "@/components/service/Service";
@@ -24,6 +25,7 @@ const Layout = () => {
       <Testimonials/>
       <Blog/>
       <Contact/>
+      <NewsLatter/>
     </div>
   );
 };
