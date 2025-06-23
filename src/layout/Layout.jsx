@@ -1,4 +1,5 @@
 import About from "@/components/About/About";
+import Blog from "@/components/Blog/Blog";
 import Contact from "@/components/contact/Contact";
 import Education from "@/components/Education/Education";
 import Project from "@/components/Project/Project";
@@ -21,6 +22,7 @@ const Layout = () => {
       <Education/>
       <Project/>
       <Testimonials/>
+      <Blog/>
       <Contact/>
     </div>
   );
