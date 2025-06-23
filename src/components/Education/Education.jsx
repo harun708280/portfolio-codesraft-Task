@@ -52,7 +52,9 @@ const Education = () => {
         {/* End Text Section */}
 
         <EducationCard />
+        
       </div>
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#0e051a] to-transparent z-20 pointer-events-none" />
     </section>
   );
 };

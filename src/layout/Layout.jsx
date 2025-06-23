@@ -1,5 +1,6 @@
 import About from "@/components/About/About";
 import Education from "@/components/Education/Education";
+import Project from "@/components/Project/Project";
 import AnimatedCard from "@/components/service/AnimatedCard";
 import Service from "@/components/service/Service";
 import Nav from "@/components/shared/Nav";
@@ -16,6 +17,7 @@ const Layout = () => {
       <Service />
       <Skills/>
       <Education/>
+      <Project/>
     </div>
   );
 };
