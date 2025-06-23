@@ -1,4 +1,5 @@
 import About from "@/components/About/About";
+import Contact from "@/components/contact/Contact";
 import Education from "@/components/Education/Education";
 import Project from "@/components/Project/Project";
 import AnimatedCard from "@/components/service/AnimatedCard";
@@ -18,6 +19,7 @@ const Layout = () => {
       <Skills/>
       <Education/>
       <Project/>
+      <Contact/>
     </div>
   );
 };
