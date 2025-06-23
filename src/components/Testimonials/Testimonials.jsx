@@ -3,6 +3,7 @@ import React from "react";
 import { AnimatedTestimonialsDemo } from "./AnimatedTestimonialsDemo";
 import DualTextEffect from "../shared/DualTextEffect.";
 import { motion } from "framer-motion"
+import FadeContent from "../motion/FadeContent";
 
 const Testimonials = () => {
   return (
@@ -33,18 +34,34 @@ const Testimonials = () => {
           data-aos-duration="1000"
         >
           {/* Dual Text Effect */}
-          <DualTextEffect
-            largeText=" testimonial"
-            smallText="My Testimonial"
-            largeTextColor="text-[#3a2a5e18]"
-            smallTextColor="text-white"
-            largeTextSize="text-[40px] md:text-[80px] lg:text-[100px]"
-            smallTextSize="text-lg md:text-2xl lg:text-[40px]"
-          />
+          <FadeContent
+            blur={true}
+            duration={1000}
+            easing="ease-out"
+            initialOpacity={0}
+          >
+            <DualTextEffect
+              largeText="testimonial"
+              smallText="My Testimonial"
+              largeTextColor="text-[#34276817]"
+              smallTextColor="text-white/70"
+              largeTextSize="text-[120px]"
+              smallTextSize="text-3xl "
+            />
+          </FadeContent>
         </div>
         {/* End Text Section */}
 
-        <AnimatedTestimonialsDemo />
+        <FadeContent
+            blur={true}
+            duration={1200}
+            easing="ease-out"
+            initialOpacity={0}
+          >
+            <AnimatedTestimonialsDemo />
+          </FadeContent>
+
+        
       </div>
        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#0e051a] to-transparent z-20 pointer-events-none" />
     </section>

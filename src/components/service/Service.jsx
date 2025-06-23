@@ -40,13 +40,13 @@ const Service = () => {
   return (
     <section className="relative w-full min-h-screen  mt-12 flex flex-col justify-center bg-[#0e051a] pb-20 text-white bg-[radial-gradient(circle,rgba(255,255,255,0.2)_1px,transparent_1px)] bg-[length:20px_20px] mask-image-[radial-gradient(300px_circle_at_center,white,transparent)] -webkit-mask-image-[radial-gradient(300px_circle_at_center,white,transparent)] overflow-hidden px-4">
       {/* Purple Glow - Bottom Right */}
-      <div className="absolute bottom-0 right-10 w-96 h-96 bg-purple-500 opacity-40 rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2" />
+      <div className="absolute bottom-0 transform translate-x-1/2 translate-y-1/2 bg-purple-500 rounded-full right-10 w-96 h-96 opacity-40 blur-3xl" />
 
       {/* Star Image - Bottom Right with animation */}
       <motion.img
         src="star.png"
         alt="Star Bottom Right"
-        className="absolute bottom-2 right-2 w-56 h-56"
+        className="absolute w-56 h-56 bottom-2 right-2"
         animate={{
           rotate: [360, 0],
           y: [0, -10, 0, 10, 0],
@@ -78,31 +78,38 @@ const Service = () => {
       </div>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 max-w-7xl mx-auto">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="bg-gradient-to-br from-primary/30 to-background z-20 p-6 rounded-xl border border-white/10 hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
-            data-aos="fade-up"
-            data-aos-delay={index * 100}
-          >
-            <div>
-              <div className="mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold text-white mb-2">
-                {service.title}
-              </h3>
-              <p className="text-sm text-white/70 mb-4">
-                {service.description}
-              </p>
+      <FadeContent
+        blur={true}
+        duration={1200}
+        easing="ease-out"
+        initialOpacity={0}
+      >
+        <div className="grid grid-cols-1 gap-6 mx-auto mt-12 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="z-20 flex flex-col justify-between p-6 transition-all duration-300 border bg-gradient-to-br from-primary/30 to-background rounded-xl border-white/10 hover:shadow-lg"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
+              <div>
+                <div className="mb-4">{service.icon}</div>
+                <h3 className="mb-2 text-xl font-semibold text-white">
+                  {service.title}
+                </h3>
+                <p className="mb-4 text-sm text-white/70">
+                  {service.description}
+                </p>
+              </div>
+              <button className="px-4 py-2 mt-auto text-sm text-white transition duration-300 bg-purple-600 rounded-md hover:bg-purple-700">
+                Learn More
+              </button>
             </div>
-            <button className="mt-auto px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-md transition duration-300">
-              Learn More
-            </button>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </FadeContent>
+
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#0e051a] to-transparent z-20 pointer-events-none" />
-      
 
       {/* CTA Button */}
     </section>

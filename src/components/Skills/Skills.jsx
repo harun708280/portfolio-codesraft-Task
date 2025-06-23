@@ -4,6 +4,7 @@ import DualTextEffect from "../shared/DualTextEffect.";
 import { SkillCard } from "./SkillCard";
 import { motion } from "framer-motion";
 import { ShineBorder } from "../magicui/shine-border";
+import FadeContent from "../motion/FadeContent";
 const Skills = () => {
   const skillData = [
     {
@@ -43,7 +44,6 @@ const Skills = () => {
       id="skills"
       className="relative flex flex-col justify-center min-h-screen py-20 pb-40 overflow-hidden "
     >
-
       <div className="mx-auto max-w-7xl">
         <div className="absolute -bottom-28 z-20 -left-[15%]  w-96 h-96 bg-purple-500 opacity-40 rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2" />
         <motion.img
@@ -67,18 +67,31 @@ const Skills = () => {
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            <DualTextEffect
-              largeText="SKILLS"
-              smallText="Skills"
-              largeTextColor="text-[#34276817]"
-              smallTextColor="text-white/70"
-              largeTextSize="text-[120px]"
-              smallTextSize="text-3xl "
-            />
+            <FadeContent
+              blur={true}
+              duration={1000}
+              easing="ease-out"
+              initialOpacity={0}
+            >
+              {" "}
+              <DualTextEffect
+                largeText="SKILLS"
+                smallText="Skills"
+                largeTextColor="text-[#34276817]"
+                smallTextColor="text-white/70"
+                largeTextSize="text-[120px]"
+                smallTextSize="text-3xl "
+              />
+            </FadeContent>
           </div>
 
           {/* Skills & Description section */}
-          <div className="flex flex-col justify-between gap-10 mt-12 lg:flex-row">
+          <FadeContent
+            blur={true}
+            duration={1200}
+            easing="ease-out"
+            initialOpacity={0}
+          ><div className="flex flex-col justify-between gap-10 mt-12 lg:flex-row">
             {/* Left: Skills */}
             <div className="grid w-full grid-cols-1 gap-6 lg:w-2/3 sm:grid-cols-2">
               {skillData.map((skill, index) => (
@@ -88,9 +101,7 @@ const Skills = () => {
                   data-aos-delay={index * 100}
                   className="bg-[#1a0f2c] border border-white/10 p-5 rounded-lg shadow hover:shadow-lg transition-all duration-300"
                 >
-                    
                   <div className="flex items-center gap-2 mb-2">
-                    
                     {skill.icon}
                     <h3 className="text-lg font-semibold text-white">
                       {skill.title}
@@ -126,7 +137,8 @@ const Skills = () => {
               </button>
             </div>
           </div>
-          <SkillCard />
+          <SkillCard /></FadeContent>
+          
         </div>
         <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#0e051a] to-transparent z-20 pointer-events-none" />
       </div>

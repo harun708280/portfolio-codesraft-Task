@@ -94,17 +94,33 @@ const Project = () => {
       </div>
 
       {/* First Line */}
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+      <FadeContent
+            blur={true}
+            duration={1200}
+            easing="ease-out"
+            initialOpacity={0}
+          >
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
         <ProjectCard {...projects[0]} />
         <ProjectCard {...projects[1]} />
       </div>
+          </FadeContent>
+      
 
       {/* Second Line */}
-      <div className="grid grid-cols-1 gap-6 pb-20 mt-10 md:grid-cols-3">
+      <FadeContent
+            blur={true}
+            duration={1300}
+            easing="ease-out"
+            initialOpacity={0}
+          >
+            <div className="grid grid-cols-1 gap-6 pb-20 mt-10 md:grid-cols-3">
         <ProjectCard {...projects[2]} />
         <ProjectCard {...projects[3]} />
         <ProjectCard {...projects[4]} />
       </div>
+          </FadeContent>
+      
     </div>
     <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#0e051a] to-transparent z-20 pointer-events-none" />
    </div>
