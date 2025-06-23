@@ -88,7 +88,7 @@ const Service = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="z-20 flex flex-col justify-between p-6 transition-all duration-300 border bg-gradient-to-br from-primary/30 to-background rounded-xl border-white/10 hover:shadow-lg"
+              className="z-20 flex flex-col justify-between p-6 transition-all duration-300 border bg-gradient-to-b from-[#1a0c2e] to-[#160a26]  shadow-lg overflow-hidden  rounded-xl border-white/10 hover:shadow-lg"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
@@ -101,7 +101,7 @@ const Service = () => {
                   {service.description}
                 </p>
               </div>
-              <button className="px-4 py-2 mt-auto text-sm text-white transition duration-300 bg-purple-600 rounded-md hover:bg-purple-700">
+              <button className="px-4 py-2 mt-auto text-sm text-white transition duration-300 rounded-md bg-primary hover:bg-primary">
                 Learn More
               </button>
             </div>

@@ -112,7 +112,7 @@ const Skills = () => {
                   </div>
                   <div className="w-full h-3 overflow-hidden rounded-full bg-white/10">
                     <div
-                      className="h-full transition-all duration-500 bg-purple-500 rounded-full"
+                      className="h-full transition-all duration-500 rounded-full bg-primary"
                       style={{ width: `${skill.percentage}%` }}
                     ></div>
                   </div>
@@ -132,7 +132,7 @@ const Skills = () => {
                 system, I focus on performance, accessibility, and clean code
                 architecture.
               </p>
-              <button className="px-4 py-2 mt-5 text-sm text-white transition duration-300 bg-purple-600 rounded-md hover:bg-purple-700">
+              <button className="px-4 py-2 mt-5 text-sm text-white transition duration-300 rounded-md bg-primary hover:bg-primary">
                 Learn More
               </button>
             </div>

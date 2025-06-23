@@ -11,12 +11,13 @@ import Skills from "@/components/Skills/Skills";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import Home from "@/page/Home";
 import React from "react";
+import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
     <div className="min-h-screen bg-background">
       <Nav />
-      <Home />
+      {/* <Home />
       <About />\
       <Service />
       <Skills/>
@@ -24,7 +25,8 @@ const Layout = () => {
       <Project/>
       <Testimonials/>
       <Blog/>
-      <Contact/>
+      <Contact/> */}
+      <Outlet/>
       <NewsLatter/>
     </div>
   );

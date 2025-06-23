@@ -1,9 +1,10 @@
-import React from 'react';
+import React from "react";
 import { motion } from "framer-motion";
-import Header from './Header';
+import Header from "./Header";
+
 const Hero = () => {
-    return (
-         <section
+  return (
+    <section
       id="home"
       className="relative min-h-screen flex flex-col justify-center items-center bg-[#0e051a] text-white overflow-hidden"
     >
@@ -17,20 +18,18 @@ const Hero = () => {
         }}
       />
 
-      {/* Purple Glow - Top Left */}
-      <div className="absolute top-0 left-10 w-96 h-96 bg-purple-500 opacity-40 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2" />
+      {/* Purple Glows */}
+      <div className="absolute top-0 transform -translate-x-1/2 -translate-y-1/2 bg-purple-500 rounded-full left-10 w-72 h-72 md:w-96 md:h-96 opacity-40 blur-3xl" />
+      <div className="absolute bottom-0 transform translate-x-1/2 translate-y-1/2 bg-purple-500 rounded-full right-10 w-72 h-72 md:w-96 md:h-96 opacity-40 blur-3xl" />
 
-      {/* Purple Glow - Bottom Right */}
-      <div className="absolute bottom-0 right-10 w-96 h-96 bg-purple-500 opacity-40 rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2" />
-
-      {/* Star Image - Top Left with animation */}
-       <motion.img
+      {/* Animated Stars */}
+      <motion.img
         src="star.png"
         alt="Star Top Left"
-        className="absolute -top-4 -left-10 w-48 h-48"
+        className="absolute w-32 h-32 -top-4 -left-10 md:w-48 md:h-48"
         animate={{
           rotate: [0, 360],
-          y: [0, -10, 0, 10, 0], 
+          y: [0, -10, 0, 10, 0],
         }}
         transition={{
           duration: 20,
@@ -39,11 +38,10 @@ const Hero = () => {
         }}
       />
 
-      {/* Star Image - Bottom Right with animation */}
       <motion.img
         src="star.png"
         alt="Star Bottom Right"
-        className="absolute bottom-2 right-2 w-56 h-56"
+        className="absolute w-40 h-40 bottom-2 right-2 md:w-56 md:h-56"
         animate={{
           rotate: [360, 0],
           y: [0, -10, 0, 10, 0],
@@ -55,13 +53,15 @@ const Hero = () => {
         }}
       />
 
-      {/* Main Content Placeholder */}
-      <div className="z-10 text-center px-4">
-        <Header/>
+      {/* Main Content */}
+      <div className="z-10 px-4 text-center">
+        <Header />
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#0e051a] to-transparent z-20 pointer-events-none" />
+
+      {/* Bottom Gradient */}
+      <div className="absolute bottom-0 left-0 w-full h-24 md:h-32 bg-gradient-to-t from-[#0e051a] to-transparent z-20 pointer-events-none" />
     </section>
-    );
+  );
 };
 
 export default Hero;

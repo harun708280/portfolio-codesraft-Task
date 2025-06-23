@@ -9,21 +9,21 @@ import AnimatedContent from "../motion/AnimatedContent";
 const Header = () => {
   return (
     <div>
-      <div className="max-w-7xl w-[76%] mx-auto text-center">
+      <div className="max-w-7xl lg:w-[76%] mx-auto lg:text-center">
         <BlurText
           text="Hi I'm Alex Robert"
           delay={150}
           animateBy="words"
           direction="top"
-          className="text-7xl text-center flex justify-center font-bold mb-8"
+          className="flex justify-center mt-16 mb-3 text-2xl font-bold lg: md:mb-8 md:text-3xl ter lg:text-7xl"
         />
 
         <AnimatedContent delay={0.3}>
-          <p className="text-lg font-semibold">
+          <p className="mb-5 font-semibold lg:mb-10 md:text-lg">
             {" "}
             I specialize in creating fast, responsive, and scalable web
             applications using{" "}
-            <span className="text-white mx-2 bg-primary py-1 px-2 font-bold rounded-sm">
+            <span className="px-2 py-1 mx-2 font-bold text-white rounded-sm bg-primary">
               React, Node.js, and MongoDB{" "}
             </span>
             building secure, high-performance web applications with clean
@@ -36,14 +36,14 @@ const Header = () => {
           <div
             data-aos="fade-up"
             data-aos-duration="1000"
-            className="flex gap-4 mt-10 justify-center"
+            className="flex flex-wrap justify-center gap-4 "
           >
             <Link
               to="https://drive.google.com/file/d/1FoiDLHETnPeHPw5Uwr7xxkO9cPpbAfOb/view?usp=sharing"
               target="_blank"
             >
               <ShimmerButton background="#6000fa" className="shadow-2xl">
-                <span className="flex items-center gap-2 whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg font-open-sans">
+                <span className="flex items-center gap-2 text-sm font-medium leading-none tracking-tight text-center text-white whitespace-pre-wrap dark:from-white dark:to-slate-900/10 lg:text-lg font-open-sans">
                   View My Resume <ExternalLink size={20} />
                 </span>
               </ShimmerButton>

@@ -66,7 +66,7 @@ const NewsLatter = () => {
         </form>
 
         {/* Social icons */}
-        <div className="flex flex-wrap justify-center gap-4 mt-10">
+        <div className="flex flex-wrap justify-center gap-4 mt-5">
           <SocialLinks />
         </div>
 
