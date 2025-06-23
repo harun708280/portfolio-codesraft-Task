@@ -6,6 +6,7 @@ import AnimatedCard from "@/components/service/AnimatedCard";
 import Service from "@/components/service/Service";
 import Nav from "@/components/shared/Nav";
 import Skills from "@/components/Skills/Skills";
+import Testimonials from "@/components/Testimonials/Testimonials";
 import Home from "@/page/Home";
 import React from "react";
 
@@ -19,6 +20,7 @@ const Layout = () => {
       <Skills/>
       <Education/>
       <Project/>
+      <Testimonials/>
       <Contact/>
     </div>
   );
