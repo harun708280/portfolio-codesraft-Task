@@ -8,6 +8,7 @@ import Testimonials from "../components/Testimonials/Testimonials";
 import Blog from "../components/Blog/Blog";
 import { Contact } from "lucide-react";
 import About from "../components/About/About";
+import Contacts from "./Contacts";
 
 const Home = () => {
   return (
@@ -20,7 +21,7 @@ const Home = () => {
       <Project />
       <Testimonials />
       <Blog />
-      <Contact />{" "}
+      <Contacts />{" "}
     </div>
   );
 };

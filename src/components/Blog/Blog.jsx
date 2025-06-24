@@ -2,6 +2,8 @@ import React from "react";
 import FadeContent from "../motion/FadeContent";
 import DualTextEffect from "../shared/DualTextEffect.";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 const blogs = [
   {
     id: 1,
@@ -34,12 +36,15 @@ const blogs = [
 
 const Blog = () => {
   return (
-    <div className="relative flex items-center justify-center pb-20 overflow-hidden ">
-      <div className="absolute bottom-0 z-20 -left-[15%]  w-96 h-96 bg-purple-500 opacity-40 rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2" />
+    <div className="relative flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#0e051a] text-white">
+      {/* Background Glow */}
+      <div className="absolute bottom-0 -left-[15%] w-72 sm:w-96 h-72 sm:h-96 bg-purple-500 opacity-40 rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2 z-10" />
+
+      {/* Floating Star */}
       <motion.img
         src="star.png"
-        alt="Star Bottom Right"
-        className="absolute z-10 w-56 h-56 -bottom-3 left-2"
+        alt="Star"
+        className="absolute z-10 w-32 h-32 sm:w-44 md:w-56 sm:h-44 md:h-56 -bottom-3 left-2"
         animate={{
           rotate: [360, 0],
           y: [0, -10, 0, 10, 0],
@@ -50,36 +55,30 @@ const Blog = () => {
           ease: "linear",
         }}
       />
-      <div className="mx-auto text-white max-w max-w-7xl">
+
+      {/* Main Content */}
+      <div className="relative z-20 w-full max-w-7xl">
+        {/* Section Title */}
         <div className="flex justify-center pb-12">
-          <FadeContent
-            blur={true}
-            duration={1000}
-            easing="ease-out"
-            initialOpacity={0}
-          >
+          <FadeContent blur duration={1000} easing="ease-out" initialOpacity={0}>
             <DualTextEffect
               largeText="blog post"
-              smallText=" Latest Blog Posts"
+              smallText="Latest Blog Posts"
               largeTextColor="text-[#34276817]"
               smallTextColor="text-white/70"
-              largeTextSize="text-[120px]"
-              smallTextSize="text-3xl "
+              largeTextSize="text-4xl sm:text-5xl lg:text-[120px]"
+              smallTextSize="text-xl w-ful  sm:text-xl  text-center lg:text-3xl"
             />
           </FadeContent>
         </div>
 
-        <FadeContent
-          blur={true}
-          duration={1200}
-          easing="ease-out"
-          initialOpacity={0}
-        >
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {/* Blog Cards */}
+        <FadeContent blur duration={1200} easing="ease-out" initialOpacity={0}>
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {blogs.map((blog) => (
               <div
                 key={blog.id}
-                className="bg-[#130a24] border-[#1e1038] hover:border-[#2e1c58] transition-all rounded-xl overflow-hidden shadow-md hover:scale-[1.02]  duration-300 backdrop-blur-sm border border-white/10 z-50"
+                className="bg-[#130a24] border border-white/10 rounded-xl shadow-md overflow-hidden hover:scale-[1.02] hover:border-[#2e1c58] transition-all duration-300 backdrop-blur-sm"
               >
                 <img
                   src={blog.image}
@@ -90,16 +89,21 @@ const Blog = () => {
                   <p className="mb-2 text-sm text-purple-400">{blog.date}</p>
                   <h3 className="mb-2 text-xl font-semibold">{blog.title}</h3>
                   <p className="text-sm text-gray-300">{blog.description}</p>
-                  <button className="mt-4 text-sm font-semibold text-purple-400 hover:underline">
+                     <Link
+              to="https://drive.google.com/file/d/122hwCmwXHT6OhqMzb8XGJIcpYvfst27q/view?usp=sharing"
+              target="_blank"
+            ><button className="mt-4 text-sm font-semibold text-purple-400 hover:underline">
                     Read More →
-                  </button>
+                  </button></Link>
                 </div>
               </div>
             ))}
           </div>
         </FadeContent>
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#0e051a] to-transparent z-20 pointer-events-none" />
+
+      {/* Bottom Gradient */}
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#0e051a] to-transparent z-10 pointer-events-none" />
     </div>
   );
 };

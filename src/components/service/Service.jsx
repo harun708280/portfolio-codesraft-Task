@@ -3,6 +3,7 @@ import DualTextEffect from "../shared/DualTextEffect.";
 import FadeContent from "../motion/FadeContent";
 import { Code, Server, Layers, PenTool, Link2, Zap } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 const services = [
   {
     title: "Frontend Development",
@@ -38,7 +39,7 @@ const services = [
 
 const Service = () => {
   return (
-    <section className="relative w-full min-h-screen  mt-12 flex flex-col justify-center bg-[#0e051a] pb-20 text-white bg-[radial-gradient(circle,rgba(255,255,255,0.2)_1px,transparent_1px)] bg-[length:20px_20px] mask-image-[radial-gradient(300px_circle_at_center,white,transparent)] -webkit-mask-image-[radial-gradient(300px_circle_at_center,white,transparent)] overflow-hidden px-4">
+    <section className="relative w-full min-h-screen   lg:mt-12 flex flex-col justify-center bg-[#0e051a] pb-20 text-white bg-[radial-gradient(circle,rgba(255,255,255,0.2)_1px,transparent_1px)] bg-[length:20px_20px] mask-image-[radial-gradient(300px_circle_at_center,white,transparent)] -webkit-mask-image-[radial-gradient(300px_circle_at_center,white,transparent)] overflow-hidden px-4">
       {/* Purple Glow - Bottom Right */}
       <div className="absolute bottom-0 transform translate-x-1/2 translate-y-1/2 bg-purple-500 rounded-full right-10 w-96 h-96 opacity-40 blur-3xl" />
 
@@ -70,9 +71,9 @@ const Service = () => {
             largeText="My Service"
             smallText="My Service"
             largeTextColor="text-[#34276817]"
-            smallTextColor="text-white/70"
-            largeTextSize="text-[120px]"
-            smallTextSize="text-3xl"
+              smallTextColor="text-white/70"
+              largeTextSize="text-4xl pt-12 lg:text-[120px]"
+              smallTextSize="text-xl pt-12 md:text-3xl lg:text-3xl  w-full flex justify-center text-center"
           />
         </FadeContent>
       </div>
@@ -101,9 +102,13 @@ const Service = () => {
                   {service.description}
                 </p>
               </div>
-              <button className="px-4 py-2 mt-auto text-sm text-white transition duration-300 rounded-md bg-primary hover:bg-primary">
+                 <Link
+              to="https://drive.google.com/file/d/122hwCmwXHT6OhqMzb8XGJIcpYvfst27q/view?usp=sharing"
+              target="_blank"
+            ><button className="px-4 py-2 mt-auto text-sm text-white transition duration-300 rounded-md bg-primary hover:bg-primary">
                 Learn More
-              </button>
+              </button></Link>
+              
             </div>
           ))}
         </div>

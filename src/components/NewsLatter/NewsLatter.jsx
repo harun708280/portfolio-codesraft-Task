@@ -10,7 +10,7 @@ const NewsLatter = () => {
       <motion.img
         src="star.png"
         alt="Star Bottom Right"
-        className="absolute z-10 w-56 h-56 -bottom-3 left-2"
+        className="absolute z-10 w-40 h-40 lg:h-56 lg:w-56 -bottom-3 left-2"
         animate={{
           rotate: [360, 0],
           y: [0, -10, 0, 10, 0],
@@ -59,7 +59,7 @@ const NewsLatter = () => {
           </div>
           <button
             type="submit"
-            className="w-1/3 px-6 py-3 text-sm font-semibold text-white transition duration-200 ease-in-out rounded-md bg-primary hover:bg-primary/90"
+            className="px-6 py-3 text-sm font-semibold text-white transition duration-200 ease-in-out rounded-md lg:w-1/3 bg-primary hover:bg-primary/90"
           >
             Subscribe Now
           </button>

@@ -38,7 +38,7 @@ const About = () => {
   ];
 
   return (
-    <div className="relative py-20 overflow-hidden text-white bg-background">
+    <div className="relative py-10 overflow-hidden text-white md:py-16 lg:py-20 bg-background">
       {/* Purple Glow */}
       <div className="absolute -bottom-28 -left-[15%] w-96 h-96 bg-purple-500 opacity-40 rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2 z-10" />
 
@@ -60,8 +60,8 @@ const About = () => {
               smallText="About Me"
               largeTextColor="text-[#34276817]"
               smallTextColor="text-white/70"
-              largeTextSize="text-[120px]"
-              smallTextSize="text-3xl"
+              largeTextSize="text-5xl lg:text-[120px]"
+              smallTextSize="text-xl md:text-3xl lg:text-3xl  w-full flex justify-center text-center"
             />
           </FadeContent>
         </div>
@@ -70,7 +70,7 @@ const About = () => {
         <FadeContent blur duration={1200}>
           <div className="flex flex-col items-center justify-center gap-12 mt-10 lg:flex-row">
             {/* Image Section */}
-            <div className="w-full sm:w-3/4 md:w-1/2 lg:w-[45%]">
+            <div className="w-full  lg:w-[45%]">
               <div className="w-full h-full overflow-hidden shadow-xl rounded-xl">
                 <img
                   src="./man.jpg"
@@ -81,8 +81,8 @@ const About = () => {
             </div>
 
             {/* Text Section */}
-            <div className="w-full sm:w-3/4 md:w-1/2 lg:w-[50%] text-center lg:text-left">
-              <h1 className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+            <div className="w-full  lg:w-[50%] text-center lg:text-left">
+              <h1 className="text-xl font-bold leading-tight md:text-4xl lg:text-6xl">
                 Best Web Developer
                 <br />
                 In Bangladesh

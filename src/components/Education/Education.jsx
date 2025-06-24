@@ -43,9 +43,9 @@ const Education = () => {
               largeText="Education"
               smallText="Education"
               largeTextColor="text-[#34276817]"
-              smallTextColor="text-white/70"
-              largeTextSize="text-[120px]"
-              smallTextSize="text-3xl "
+                smallTextColor="text-white/70"
+                largeTextSize="text-4xl sm:text-5xl lg:text-[120px]"
+                smallTextSize="text-lg sm:text-xl md:text-3xl w-full flex justify-center text-center"
             />
           </FadeContent>
         </div>
