@@ -42,7 +42,7 @@ This is a modern and responsive portfolio website built using **React + Vite**, 
 ## 📦 Installation & Run Locally
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/harun708280/portfolio-codesraft-Task.git
+
 npm install
 npm run dev
