@@ -1,6 +1,12 @@
 import React from "react";
 import DualTextEffect from "../shared/DualTextEffect.";
-import { SearchCheck, Users, PlayCircle, CheckCircle, Award } from "lucide-react";
+import {
+  SearchCheck,
+  Users,
+  PlayCircle,
+  CheckCircle,
+  Award,
+} from "lucide-react";
 import { motion } from "framer-motion";
 import FadeContent from "../motion/FadeContent";
 import AnimatedContent from "../motion/AnimatedContent";
@@ -89,9 +95,10 @@ const About = () => {
               </h1>
 
               <p className="mt-6 text-sm sm:text-base md:text-lg text-[#A4A4A4] font-light leading-7 text-justify">
-                Our vision is to be a global leader in technology by continuously innovating
-                and putting our users first. We believe in transparency, quality, and
-                collaboration, and we work hard to turn ideas into reality.
+                Our vision is to be a global leader in technology by
+                continuously innovating and putting our users first. We believe
+                in transparency, quality, and collaboration, and we work hard to
+                turn ideas into reality.
               </p>
 
               {/* Skills */}

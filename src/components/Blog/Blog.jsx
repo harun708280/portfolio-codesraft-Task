@@ -60,7 +60,12 @@ const Blog = () => {
       <div className="relative z-20 w-full max-w-7xl">
         {/* Section Title */}
         <div className="flex justify-center pb-12">
-          <FadeContent blur duration={1000} easing="ease-out" initialOpacity={0}>
+          <FadeContent
+            blur
+            duration={1000}
+            easing="ease-out"
+            initialOpacity={0}
+          >
             <DualTextEffect
               largeText="blog post"
               smallText="Latest Blog Posts"
@@ -89,12 +94,14 @@ const Blog = () => {
                   <p className="mb-2 text-sm text-purple-400">{blog.date}</p>
                   <h3 className="mb-2 text-xl font-semibold">{blog.title}</h3>
                   <p className="text-sm text-gray-300">{blog.description}</p>
-                     <Link
-              to="https://drive.google.com/file/d/122hwCmwXHT6OhqMzb8XGJIcpYvfst27q/view?usp=sharing"
-              target="_blank"
-            ><button className="mt-4 text-sm font-semibold text-purple-400 hover:underline">
-                    Read More →
-                  </button></Link>
+                  <Link
+                    to="https://drive.google.com/file/d/122hwCmwXHT6OhqMzb8XGJIcpYvfst27q/view?usp=sharing"
+                    target="_blank"
+                  >
+                    <button className="mt-4 text-sm font-semibold text-purple-400 hover:underline">
+                      Read More →
+                    </button>
+                  </Link>
                 </div>
               </div>
             ))}
