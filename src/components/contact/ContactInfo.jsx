@@ -1,9 +1,4 @@
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-} from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
 import SocialLinks from "./SocialLinks";
 
@@ -15,7 +10,9 @@ export default function ContactInfo() {
       className="bg-[#130a24] border-[#1e1038] hover:border-[#2e1c58] transition-colors"
     >
       <CardHeader>
-        <CardTitle className="text-xl text-white">Contact Information</CardTitle>
+        <CardTitle className="text-xl text-white">
+          Contact Information
+        </CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
         <div className="flex items-center gap-4">

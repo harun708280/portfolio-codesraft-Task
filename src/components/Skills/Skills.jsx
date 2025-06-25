@@ -71,7 +71,7 @@ const Skills = () => {
               <DualTextEffect
                 largeText="SKILLS"
                 smallText="Skills"
-                largeTextColor="text-[#34276817]"
+                largeTextColor="text-[#9a8ec413]"
                 smallTextColor="text-white/70"
                 largeTextSize="text-4xl sm:text-5xl lg:text-[120px]"
                 smallTextSize="text-lg sm:text-xl md:text-3xl w-full flex justify-center text-center"

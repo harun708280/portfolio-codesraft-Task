@@ -17,17 +17,8 @@ const Layout = () => {
   return (
     <div className="min-h-screen bg-background">
       <Nav />
-      {/* <Home />
-      <About />\
-      <Service />
-      <Skills/>
-      <Education/>
-      <Project/>
-      <Testimonials/>
-      <Blog/>
-      <Contact/> */}
-      <Outlet/>
-      <NewsLatter/>
+      <Outlet />
+      <NewsLatter />
     </div>
   );
 };

@@ -71,11 +71,16 @@ const Project = () => {
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         {/* Title */}
         <div className="flex justify-center mb-10">
-          <FadeContent blur duration={1000} easing="ease-out" initialOpacity={0}>
+          <FadeContent
+            blur
+            duration={1000}
+            easing="ease-out"
+            initialOpacity={0}
+          >
             <DualTextEffect
               largeText="Best Project"
               smallText="Best Project"
-              largeTextColor="text-[#34276817]"
+              largeTextColor="text-[#9a8ec413]"
               smallTextColor="text-white/70"
               largeTextSize="text-4xl sm:text-5xl lg:text-[120px]"
               smallTextSize="text-xl sm:text-2xl lg:text-3xl"

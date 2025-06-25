@@ -28,7 +28,7 @@ const AnimatedCard = () => {
       ref={cardRef}
       style={{
         transition: "background-color 1s ease-in-out",
-        backgroundColor: inView ? "#4f46e5" : "#374151", // indigo-600 or gray-700
+        backgroundColor: inView ? "#4f46e5" : "#374151", 
         minHeight: "100vh",
         display: "flex",
         justifyContent: "center",

@@ -30,11 +30,16 @@ const Testimonials = () => {
       <div className="relative z-20 w-full px-4 max-w-7xl sm:px-6 lg:px-16">
         {/* Title */}
         <div className="flex flex-col items-center justify-center mb-12 space-y-8 text-center">
-          <FadeContent blur duration={1000} easing="ease-out" initialOpacity={0}>
+          <FadeContent
+            blur
+            duration={1000}
+            easing="ease-out"
+            initialOpacity={0}
+          >
             <DualTextEffect
               largeText="testimonial"
               smallText="My Testimonial"
-              largeTextColor="text-[#34276817]"
+              largeTextColor="text-[#9a8ec413]"
               smallTextColor="text-white/70"
               largeTextSize="text-4xl sm:text-5xl lg:text-[120px]"
               smallTextSize="text-xl sm:text-2xl lg:text-3xl w-full"

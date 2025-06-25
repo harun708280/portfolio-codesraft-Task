@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col justify-center items-center bg-[#0e051a] text-white overflow-hidden"
+      className="relative  flex flex-col justify-center items-center bg-[#0e051a] text-white overflow-hidden"
     >
       {/* Grid Background */}
       <div
@@ -59,7 +59,7 @@ const Hero = () => {
       </div>
 
       {/* Bottom Gradient */}
-      <div className="absolute bottom-0 left-0 w-full h-24 md:h-32 bg-gradient-to-t from-[#0e051a] to-transparent z-20 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-full h-24 md:h-24 bg-gradient-to-t from-[#0e051a] to-transparent z-20 pointer-events-none" />
     </section>
   );
 };

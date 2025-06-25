@@ -43,9 +43,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <NavLink to="/">
-              <h1 className="text-xl font-bold text-white uppercase md:text-3xl">
-                c o d e s r a f t
-              </h1>
+              <img src="./alex.png" className="h-[110px]" alt="" />
             </NavLink>
           </div>
 

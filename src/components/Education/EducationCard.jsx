@@ -41,7 +41,6 @@ const cards = [
     achievements: {
       gpa: "2.33",
       subject: "Management",
-      
     },
     subjects: [
       "HR Management",

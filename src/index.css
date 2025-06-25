@@ -60,7 +60,8 @@
     --animate-marquee: marquee var(--duration) infinite linear;
     --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite
   ;
-    --animate-shine: shine var(--duration) infinite linear}
+    --animate-shine: shine var(--duration) infinite linear;
+    --animate-orbit: orbit calc(var(--duration)*1s) linear infinite}
 }
 
 @layer base {
@@ -137,4 +138,26 @@
     background-position: 0% 0%;
     }
   }
+  @keyframes orbit {
+  0% {
+    transform: rotate(calc(var(--angle) * 1deg)) translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
+    }
+  100% {
+    transform: rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 360deg));
+    }
+  }
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(calc(var(--angle) * 1deg)) translateX(var(--radius)) rotate(calc(var(--angle) * -1deg));
+  }
+  100% {
+    transform: rotate(calc(var(--angle) * 1deg + 360deg)) translateX(var(--radius)) rotate(calc(var(--angle) * -1deg - 360deg));
+  }
+}
+
+.animate-orbit {
+  animation: orbit var(--duration)s linear infinite;
+  transform-origin: center;
 }

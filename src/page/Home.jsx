@@ -13,15 +13,32 @@ import Contacts from "./Contacts";
 const Home = () => {
   return (
     <div className="">
+      {/* Hero/Banner Section */}
       <Hero />
-      <About />\
+
+      {/* About Me Section */}
+      <About />
+
+      {/* Services Offered Section */}
       <Service />
+
+      {/* Skills Section */}
       <Skills />
+
+      {/* Education Section */}
       <Education />
+
+      {/* Projects Section */}
       <Project />
+
+      {/* Testimonials Section */}
       <Testimonials />
+
+      {/* Blog Section */}
       <Blog />
-      <Contacts />{" "}
+
+      {/* Contact Section */}
+      <Contacts />
     </div>
   );
 };
