@@ -20,7 +20,7 @@ const Home = () => {
       <About />
 
       {/* Services Offered Section */}
-      <Service />
+      {/* <Service /> */}
 
       {/* Skills Section */}
       <Skills />
@@ -31,7 +31,6 @@ const Home = () => {
       {/* Projects Section */}
       <Project />
 
-      {/* Testimonials Section */}
       <Testimonials />
 
       {/* Blog Section */}

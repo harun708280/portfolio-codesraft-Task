@@ -21,7 +21,7 @@ export default function ContactInfo() {
           </div>
           <div>
             <h3 className="pb-1 font-medium text-gray-300">Location</h3>
-            <p className="text-[#A4A4A4]">Dhaka, Bangladesh</p>
+            <p className="text-[#A4A4A4]">Rangpur, Bangladesh</p>
           </div>
         </div>
         <div className="flex items-start gap-4">
@@ -30,7 +30,7 @@ export default function ContactInfo() {
           </div>
           <div>
             <h3 className="pb-1 font-medium text-gray-300">Email</h3>
-            <p className="text-gray-400 break-words">AlexRobert@gmail.com</p>
+            <p className="text-gray-400 break-words">hellomrharunorrashid@gmail.com</p>
           </div>
         </div>
         <div className="flex items-start gap-4">
@@ -39,7 +39,7 @@ export default function ContactInfo() {
           </div>
           <div>
             <h3 className="pb-1 font-medium text-gray-300">Phone</h3>
-            <p className="text-gray-400">+880-151-653-9184</p>
+            <p className="text-gray-400">+880 1710290619</p>
           </div>
         </div>
         <div className="pt-10">

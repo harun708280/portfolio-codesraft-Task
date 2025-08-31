@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 const reviews = [
   { body: "html", img: "https://res.cloudinary.com/dowpaz8fo/image/upload/v1746199960/html-5-svgrepo-com_ohq6yu.svg" },
   { body: "css", img: "https://res.cloudinary.com/dowpaz8fo/image/upload/v1746200067/css-3-svgrepo-com_m8hvlz.svg" },
-  { body: "bootstrap", img: "https://res.cloudinary.com/dowpaz8fo/image/upload/v1746200065/bootstrap-svgrepo-com_czo1di.svg" },
+  
   { body: "tailwind css", img: "https://res.cloudinary.com/dowpaz8fo/image/upload/v1746200065/tailwindcss-icon-svgrepo-com_qqyqku.svg" },
   { body: "javascript", img: "https://res.cloudinary.com/dowpaz8fo/image/upload/v1746200065/javascript-svgrepo-com_p1d06g.svg" },
   { body: "react", img: "https://res.cloudinary.com/dowpaz8fo/image/upload/v1746200065/react-svgrepo-com_cjuhef.svg" },

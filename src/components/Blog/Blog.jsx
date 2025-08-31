@@ -7,21 +7,23 @@ import { Link } from "react-router-dom";
 const blogs = [
   {
     id: 1,
-    title: "Mastering React in 30 Days",
+    title: "Mastering NextJs in 30 Days",
     description:
-      "A roadmap to learn React step-by-step and build powerful front-end apps.",
+      "A roadmap to learn NextJs step-by-step and build powerful front-end apps.",
     date: "June 10, 2025",
     image:
-      "https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/5992673/cover_image/retina_1708x683/1005_Design-Patterns-in-React_Cover-44247834a5b31e8d08e5bbbdac4a6750.png",
+      "/next.jpg",
+      link:'https://www.linkedin.com/posts/harun-or-rashid067_reactjs-nextjs-frontenddeveloper-activity-7340470758663458817-rRxR?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAE5KD4MB3FVLSHK6wynTNlr6paUJNwW_bPQ'
   },
   {
     id: 2,
-    title: "Why Tailwind CSS is a Game Changer",
+    title: "Why  Redux is a Game Changer",
     description:
-      "Tailwind CSS simplifies modern UI design with utility-first classes. Here’s why you should use it.",
+      "Redux simplifies modern UI design with utility-first classes. Here’s why you should use it.",
     date: "May 28, 2025",
     image:
-      "https://v3.tailwindcss.com/_next/static/media/tailwindui-small@75.8bb955b2.jpg",
+      "/redux.jpg",
+      link:'https://www.linkedin.com/posts/harun-or-rashid067_reactjs-reduxtoolkit-rtkquery-activity-7332495646047830017-oSkS?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAE5KD4MB3FVLSHK6wynTNlr6paUJNwW_bPQ'
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ const blogs = [
     date: "May 12, 2025",
     image:
       "https://cdn.sanity.io/images/vftxng62/production/fd3a582aa29d8f716f657173659977746d9ee459-3800x1930.png?w=1200&fit=max&auto=format",
+      link:'https://www.linkedin.com/posts/harun-or-rashid067_reactjs-nextjs-frontenddeveloper-activity-7340470758663458817-rRxR?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAE5KD4MB3FVLSHK6wynTNlr6paUJNwW_bPQ'
   },
 ];
 
@@ -38,13 +41,14 @@ const Blog = () => {
   return (
     <div className="relative flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#0e051a] text-white">
       {/* Background Glow */}
-      <div className="absolute bottom-0 -left-[15%] w-72 sm:w-96 h-72 sm:h-96 bg-purple-500 opacity-40 rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2 z-10" />
+      {/* <div className="absolute bottom-0 -left-[15%] w-72 sm:w-96 h-72 sm:h-96 bg-purple-500 opacity-40 rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2 z-10" /> */}
 
       {/* Floating Star */}
+      
       <motion.img
         src="star.png"
-        alt="Star"
-        className="absolute z-10 w-32 h-32 sm:w-44 md:w-56 sm:h-44 md:h-56 -bottom-3 left-2"
+        alt="Star Bottom Right"
+        className="absolute w-40 h-40 -bottom-20 right-2 md:w-56 md:h-56"
         animate={{
           rotate: [360, 0],
           y: [0, -10, 0, 10, 0],
@@ -95,7 +99,7 @@ const Blog = () => {
                   <h3 className="mb-2 text-xl font-semibold">{blog.title}</h3>
                   <p className="text-sm text-gray-300">{blog.description}</p>
                   <Link
-                    to="https://drive.google.com/file/d/122hwCmwXHT6OhqMzb8XGJIcpYvfst27q/view?usp=sharing"
+                    to={blog.link}
                     target="_blank"
                   >
                     <button className="mt-4 text-sm font-semibold text-purple-400 hover:underline">

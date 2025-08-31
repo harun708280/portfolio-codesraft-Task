@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 const NewsLatter = () => {
   return (
     <div className="px-4 relative py-16 text-center md:px-0 bg-[#0e051a] pb-20 text-white bg-[radial-gradient(circle,rgba(255,255,255,0.2)_1px,transparent_1px)] bg-[length:20px_20px] mask-image-[radial-gradient(300px_circle_at_center,white,transparent)] overflow-hidden">
-      <div className="absolute bottom-0 z-20 -left-[25%]  w-96 h-96 bg-purple-500 opacity-40 rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2" />
+      {/* <div className="absolute bottom-0 z-20 -left-[25%]  w-96 h-96 bg-purple-500 opacity-40 rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2" /> */}
       <motion.img
         src="star.png"
         alt="Star Bottom Right"
-        className="absolute z-10 w-40 h-40 lg:h-56 lg:w-56 -bottom-3 left-2"
+        className="absolute z-10 w-40 h-40 lg:h-56 lg:w-56 -bottom-3 right-2"
         animate={{
           rotate: [360, 0],
           y: [0, -10, 0, 10, 0],

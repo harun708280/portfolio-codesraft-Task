@@ -43,7 +43,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <NavLink to="/">
-              <img src="./alex.png" className="h-[110px]" alt="" />
+              <img src="./logo.png" className="md:h-[250px] h-[150px]" alt="" />
             </NavLink>
           </div>
 

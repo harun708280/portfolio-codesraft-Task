@@ -6,8 +6,7 @@ const ContactFrom = () => {
       <div className="w-full p-8 shadow-md bg-[#130a24] border-[#1e1038] hover:border-[#2e1c58] transition-colors rounded-2xl backdrop-blur-md">
         <h2 className="mb-6 text-3xl font-bold">Get in Touch</h2>
         <form
-          action="https://formspree.io/f/your-form-id"
-          method="POST"
+       
           className="space-y-6"
         >
           <div>

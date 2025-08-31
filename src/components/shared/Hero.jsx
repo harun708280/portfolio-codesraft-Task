@@ -19,14 +19,14 @@ const Hero = () => {
       />
 
       {/* Purple Glows */}
-      <div className="absolute top-0 transform -translate-x-1/2 -translate-y-1/2 bg-purple-500 rounded-full left-10 w-72 h-72 md:w-96 md:h-96 opacity-40 blur-3xl" />
-      <div className="absolute bottom-0 transform translate-x-1/2 translate-y-1/2 bg-purple-500 rounded-full right-10 w-72 h-72 md:w-96 md:h-96 opacity-40 blur-3xl" />
+      {/* <div className="absolute top-0 transform -translate-x-1/2 -translate-y-1/2 bg-purple-500 rounded-full left-10 w-72 h-72 md:w-96 md:h-96 opacity-40 blur-3xl" /> */}
+      {/* <div className="absolute bottom-0 transform translate-x-1/2 translate-y-1/2 bg-purple-500 rounded-full right-10 w-72 h-72 md:w-96 md:h-96 opacity-40 blur-3xl" /> */}
 
       {/* Animated Stars */}
       <motion.img
         src="star.png"
         alt="Star Top Left"
-        className="absolute w-32 h-32 -top-4 -left-10 md:w-48 md:h-48"
+        className="absolute hidden w-32 h-32 m -top-14 -left-16 md:w-48 md:h-48 md:block"
         animate={{
           rotate: [0, 360],
           y: [0, -10, 0, 10, 0],
@@ -41,7 +41,7 @@ const Hero = () => {
       <motion.img
         src="star.png"
         alt="Star Bottom Right"
-        className="absolute w-40 h-40 bottom-2 right-2 md:w-56 md:h-56"
+        className="absolute w-40 h-40 -bottom-20 right-2 md:w-56 md:h-56"
         animate={{
           rotate: [360, 0],
           y: [0, -10, 0, 10, 0],

@@ -17,7 +17,7 @@ const AnimatedTestimonials = ({ testimonials, autoplay = true }) => {
 
   useEffect(() => {
     if (autoplay) {
-      const interval = setInterval(handleNext, 5000);
+      const interval = setInterval(handleNext, 7000);
       return () => clearInterval(interval);
     }
   }, [autoplay]);
@@ -28,9 +28,9 @@ const AnimatedTestimonials = ({ testimonials, autoplay = true }) => {
 
   return (
     <div className="w-full mx-auto md:pb-24 pt-8 pb-6 lg:pl-[100px]">
-      <div className="relative grid justify-end grid-cols-1 mt-8 md:grid-cols-2 md:gap-20 md:mt-20">
+      <div className="relative flex flex-col items-center justify-center md:gap-20 md:mt-20 md:flex-row">
         {/* Left side image */}
-        <div>
+        <div className="w-full ">
           <div className="relative w-full h-80">
             <AnimatePresence>
               {testimonials.map((item, index) => (
@@ -69,7 +69,7 @@ const AnimatedTestimonials = ({ testimonials, autoplay = true }) => {
                       <img
                         src={item.src}
                         alt={item.name}
-                        className="w-full rounded-2xl object-cover md:h-[350px] h-[250px]"
+                        className="w-full rounded-2xl  md:h-[450px] h-[250px]"
                         draggable={false}
                       />
                       <div className="absolute inset-0 bg-black/20" />

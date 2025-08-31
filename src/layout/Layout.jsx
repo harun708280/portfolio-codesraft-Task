@@ -1,24 +1,58 @@
-import About from "@/components/About/About";
-import Blog from "@/components/Blog/Blog";
-import Contact from "@/components/contact/Contact";
-import Education from "@/components/Education/Education";
-import NewsLatter from "@/components/NewsLatter/NewsLatter";
-import Project from "@/components/Project/Project";
-import AnimatedCard from "@/components/service/AnimatedCard";
-import Service from "@/components/service/Service";
-import Nav from "@/components/shared/Nav";
-import Skills from "@/components/Skills/Skills";
-import Testimonials from "@/components/Testimonials/Testimonials";
-import Home from "@/page/Home";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
+import Nav from "@/components/shared/Nav";
+import NewsLatter from "@/components/NewsLatter/NewsLatter";
+
+// Lucide Icons
+import { ArrowUp, ArrowDown } from "lucide-react";
 
 const Layout = () => {
+  const [showButton, setShowButton] = useState(false);
+
+  // Show scroll buttons after scrolling
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowButton(window.scrollY > 100);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="relative min-h-screen bg-background">
       <Nav />
       <Outlet />
       <NewsLatter />
+
+      {showButton && (
+        <div className="fixed z-50 flex flex-col gap-3 bottom-6 right-6">
+          <button
+            onClick={scrollToTop}
+            className="p-3 text-white transition rounded-full bg-primary hover:bg-blue-700"
+            title="Scroll to Top"
+          >
+            <ArrowUp className="w-5 h-5" />
+          </button>
+          <button
+            onClick={scrollToBottom}
+            className="p-3 text-white transition rounded-full bg-primary hover:bg-blue-700"
+            title="Scroll to Bottom"
+          >
+            <ArrowDown className="w-5 h-5" />
+          </button>
+        </div>
+      )}
     </div>
   );
 };

@@ -37,8 +37,8 @@ const Testimonials = () => {
             initialOpacity={0}
           >
             <DualTextEffect
-              largeText="testimonial"
-              smallText="My Testimonial"
+              largeText="achievements"
+              smallText="My Achievements"
               largeTextColor="text-[#9a8ec413]"
               smallTextColor="text-white/70"
               largeTextSize="text-4xl sm:text-5xl lg:text-[120px]"

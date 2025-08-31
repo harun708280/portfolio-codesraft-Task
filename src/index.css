@@ -161,3 +161,22 @@
   animation: orbit var(--duration)s linear infinite;
   transform-origin: center;
 }
+@font-face {
+  font-family: "Sporting Grotesque";
+  src: url("/SportingGrotesque-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sporting Grotesque";
+  src: url("/SportingGrotesque-Bold.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: 'grotesque';
+}

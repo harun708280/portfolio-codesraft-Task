@@ -11,14 +11,14 @@ const Header = () => {
   return (
     <div>
       <div className="max-w-7xl min-h-screen h-full relative lg:w-[76%] mx-auto lg:text-center flex flex-col justify-center items-center">
-        <div className="flex items-center justify-center w-full mt-24">
+        <div className="flex items-center justify-center w-full mt-8 md:mt-24">
           <FadeContent blur duration={1200}>
             <div
-              className="relative w-full max-w-[300px] md:max-w-[400px] aspect-square bg-cover bg-center bg-no-repeat rounded-xl shadow-xl flex items-center justify-center"
+              className="relative w-full max-w-[300px] md:max-w-[500px] aspect-square bg-cover bg-center bg-no-repeat rounded-xl shadow-xl flex items-center justify-center"
               style={{ backgroundImage: "url('./mainIcons.svg')" }}
             >
               <img
-                src="./man.png"
+                src="./ha.png"
                 alt="Profile"
                 className="relative z-10 object-contain w-full h-auto"
               />
@@ -26,15 +26,15 @@ const Header = () => {
           </FadeContent>
         </div>
         <BlurText
-          text="Hi I'm Alex Robert"
+          text="Hi I'm Harun Or Rashid"
           delay={150}
           animateBy="words"
           direction="top"
-          className="flex justify-center mb-3 -mt-24 text-2xl font-bold lg:-mt-24 md:mb-5 md:text-3xl ter lg:text-7xl"
+          className="flex justify-center text-2xl font-bold -mt-14 md:-mt-24 lg:-mt-20 md:mb-5 md:text-3xl ter lg:text-7xl"
         />
 
         <AnimatedContent delay={0.3}>
-          <p className="mb-5 font-semibold lg:mb-10 md:text-lg">
+          <p className="max-w-6xl mb-5 font-semibold lg:mb-10 md:text-lg">
             {" "}
             I specialize in creating fast, responsive, and scalable web
             applications using{" "}
@@ -52,7 +52,7 @@ const Header = () => {
             className="flex flex-wrap justify-center gap-4 pb-10"
           >
             <Link
-              to="https://drive.google.com/file/d/122hwCmwXHT6OhqMzb8XGJIcpYvfst27q/view?usp=sharing"
+              to="https://drive.google.com/file/d/11ILSeM_HOQaq27uFQfwfm6XjUxRqIw8o/view?usp=sharing"
               target="_blank"
               className="z-50"
             >

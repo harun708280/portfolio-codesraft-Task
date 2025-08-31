@@ -1,82 +1,83 @@
 "use client";
-import { GraduationCap } from "lucide-react";
+
+import { GraduationCap, School, Laptop } from "lucide-react";
 import EducationCards from "./EducationCards";
 
 const cards = [
   {
     id: 1,
-    title: "Bachelor of Business Administration",
-    subtitle: "Habibullah Bahar College",
-    year: "1st Year",
-    period: "2020-2021",
+    title: "Secondary School Certificate (SSC)",
+    subtitle: "Nageswari Doyamoyee Pilot Academy",
+    year: "2022",
+    period: "2021-2022",
+    height: "h-[510px]",
     description:
-      "Learned business fundamentals and introductory management concepts.",
-    icon: GraduationCap,
-    // height: "h-[470px]",
-    delay: 0,
+      "Completed SSC from Science group with core focus on Physics, Chemistry, and Math.",
+    icon: School, // 🎓 স্কুল আইকন
     achievements: {
-      gpa: "2.50",
-      subject: "Management",
+      gpa: "5.00",
+      subject: "Science",
     },
     subjects: [
-      "BD History",
-      "MicroEcon",
-      "Acct. Prin",
-      "Biz Intro",
-      "Mgmt Prin",
-      "Mktg Prin",
+      "Physics",
+      "Chemistry",
+      "Math",
+      "Biology",
+      "ICT",
+      "English",
+    ],
+    delay: 0.1,
+  },
+  {
+    id: 2,
+    title: "Diploma in Computer Science & Technology",
+    subtitle: "Rangpur Polytechnic Institute",
+    year: "2022 - Present",
+    period: "2022-2026",
+    description:
+      "Learning software development fundamentals, web technologies, networking, and data structures.",
+    icon: GraduationCap, // 🎓 গ্র্যাজুয়েশন আইকন
+    achievements: {
+      gpa: "N/A",
+      subject: "Computer Science",
+    },
+    height: "h-[540px]",
+    subjects: [
+      "C Programming",
+      "Web Design",
+      "Database",
+      "Networking",
+      "Java",
+      "Operating Systems",
     ],
     delay: 0.2,
   },
   {
-    id: 2,
-    title: "Bachelor of Business Administration",
-    subtitle: "Habibullah Bahar College",
-    year: "2nd Year",
-    period: "2022-2023",
-    description: "Studied core business disciplines and case analysis methods.",
-    icon: GraduationCap,
-    // height: "h-[500px]",
-    delay: 100,
-    achievements: {
-      gpa: "2.33",
-      subject: "Management",
-    },
-    subjects: [
-      "HR Management",
-      "Biz Communication",
-      "Business Law",
-      "Finance Principles",
-      "Business Math",
-      "IT for Business",
-      "MacroEcon",
-    ],
-    delay: 0.3,
-  },
-  {
     id: 3,
-    title: "Bachelor of Business Administration",
-    subtitle: "Habibullah Bahar College",
-    year: "3rd Year",
-    period: "2024-2025",
-    description: "Focused on strategic management and financial analysis.",
-    icon: GraduationCap,
-    height: "h-[570px]",
-    delay: 200,
+    title: "Professional Full Stack Developer Course",
+    subtitle: "Programming Hero (Remote)",
+    year: "2024",
+     height: "h-[570px]",
+    period: "Level 01 – Level 02",
+    description:
+      "Building real-world full stack applications using React.js, Next.js, Node.js, MongoDB, and more.",
+    icon: Laptop, // 💻 ল্যাপটপ আইকন
     achievements: {
       gpa: "N/A",
-      subject: "Management",
+      subject: "Full Stack Dev:",
     },
     subjects: [
-      "Operations Mgmt",
-      "Business Stats",
-      "Org Behavior",
-      "Bangladesh Tax",
-      "Company Law",
-      "Marketing Mgmt",
-      "Management Acct",
+      "JavaScript (ES6+)",
+      "TypeScript",
+      "React.js",
+      "Next.js",
+      
+      "Express.js",
+      "Tailwind CSS",
+      "Node.js",
+      "MongoDB",
     ],
-    delay: 0.4,
+    delay: 0.3,
   },
 ];
 
@@ -100,7 +101,6 @@ const EducationCard = () => {
           delay={card.delay}
           achievements={card.achievements}
           subjects={card.subjects}
-          delays={card.delay}
         />
       ))}
     </div>

@@ -4,6 +4,9 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+       fontFamily: {
+        grotesque: ['"Sporting Grotesque"', 'sans-serif'],
+      },
       colors: {
         text: "#ffffff",
         background: "#0e051a",

@@ -1,23 +1,24 @@
 import React from "react";
-import style from "./Contact.module.css";
+
 import ContactSection from "./ContactSection";
 import { motion } from "framer-motion";
 import FadeContent from "../motion/FadeContent";
 
 const Contact = () => {
   return (
-    <section
-      id="contact"
-      className={`${style.background} relative w-full my-12 flex items-center justify-center bg-[#0e051a] text-white overflow-hidden`}
-    >
+   <section
+  id="contact"
+  className="relative w-full my-12 flex items-center justify-center bg-[#0e051a] text-white overflow-hidden bg-[url('/map2.svg')] bg-center bg-cover bg-no-repeat"
+>
+
       {/* Background glow */}
-      <div className="absolute bottom-0 right-0 transform translate-x-1/2 translate-y-1/2 bg-purple-500 rounded-full w-72 sm:w-96 h-72 sm:h-96 opacity-40 blur-3xl" />
+      {/* <div className="absolute bottom-0 right-0 transform translate-x-1/2 translate-y-1/2 bg-purple-500 rounded-full w-72 sm:w-96 h-72 sm:h-96 opacity-40 blur-3xl" /> */}
 
       {/* Floating star */}
       <motion.img
         src="star.png"
         alt="Star Bottom Right"
-        className="absolute z-10 w-44 sm:w-56 h-44 sm:h-56 -bottom-3 right-2"
+        className="absolute z-10 w-44 sm:w-56 h-44 sm:h-56 -bottom-20 left-2"
         animate={{
           rotate: [360, 0],
           y: [0, -10, 0, 10, 0],
