@@ -25,11 +25,13 @@ const Home = () => {
       {/* Skills Section */}
       <Skills />
 
+      {/* Projects Section */}
+      <Project />
+
       {/* Education Section */}
       <Education />
 
-      {/* Projects Section */}
-      <Project />
+
 
       <Testimonials />
 

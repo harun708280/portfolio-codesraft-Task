@@ -7,44 +7,44 @@ import FadeContent from "../motion/FadeContent";
 import { Link } from "react-router-dom";
 
 const Skills = () => {
- const skillData = [
-  {
-    title: "Frontend Development",
-    percentage: 95,
-    icon: Code,
-    bgColor: "bg-purple-600",
-  },
-  {
-    title: "Backend Development",
-    percentage: 85,
-    icon: Server,
-    bgColor: "bg-green-600",
-  },
-  {
-    title: "Full Stack Web Apps",
-    percentage: 80,
-    icon: Layers,
-    bgColor: "bg-blue-600",
-  },
-  {
-    title: "API Integration",
-    percentage: 80,
-    icon: Link2,
-    bgColor: "bg-yellow-600",
-  },
-];
+  const skillData = [
+    {
+      title: "Frontend Development",
+      percentage: 95,
+      icon: Code,
+      bgColor: "bg-purple-600",
+    },
+    {
+      title: "Backend Development",
+      percentage: 85,
+      icon: Server,
+      bgColor: "bg-green-600",
+    },
+    {
+      title: "Full Stack Web Apps",
+      percentage: 80,
+      icon: Layers,
+      bgColor: "bg-blue-600",
+    },
+    {
+      title: "API Integration",
+      percentage: 80,
+      icon: Link2,
+      bgColor: "bg-yellow-600",
+    },
+  ];
 
 
   return (
     <section
       id="skills"
-      className="relative flex flex-col justify-center min-h-screen py-20 overflow-hidden lg:pb-40"
+      className="relative flex flex-col justify-center  py- overflow-hidden lg:pb-20"
     >
-      <div className="w-full px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+      <div className="w-full px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl pt-20">
         {/* background effects */}
-        
-       
-      <motion.img
+
+
+        {/* <motion.img
         src="star.png"
         alt="Star Bottom Right"
         className="absolute w-40 h-40 -bottom-20 right-2 md:w-56 md:h-56"
@@ -57,7 +57,7 @@ const Skills = () => {
           repeat: Infinity,
           ease: "linear",
         }}
-      />
+      /> */}
 
         {/* content container */}
         <div className="container mx-auto">

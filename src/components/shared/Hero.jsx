@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative  flex flex-col justify-center items-center bg-[#0e051a] text-white overflow-hidden"
+      className="relative  flex flex-col justify-center items-center bg-[#0e051a] text-white overflow-hidden h-full"
     >
       {/* Grid Background */}
       <div
@@ -23,7 +23,7 @@ const Hero = () => {
       {/* <div className="absolute bottom-0 transform translate-x-1/2 translate-y-1/2 bg-purple-500 rounded-full right-10 w-72 h-72 md:w-96 md:h-96 opacity-40 blur-3xl" /> */}
 
       {/* Animated Stars */}
-      <motion.img
+      {/* <motion.img
         src="star.png"
         alt="Star Top Left"
         className="absolute hidden w-32 h-32 m -top-14 -left-16 md:w-48 md:h-48 md:block"
@@ -51,7 +51,7 @@ const Hero = () => {
           repeat: Infinity,
           ease: "linear",
         }}
-      />
+      /> */}
 
       {/* Main Content */}
       <div className="z-10 px-4 text-center">

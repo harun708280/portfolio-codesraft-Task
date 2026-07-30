@@ -10,7 +10,7 @@ import FadeContent from "../motion/FadeContent";
 const Header = () => {
   return (
     <div>
-      <div className="max-w-7xl min-h-screen h-full relative lg:w-[76%] mx-auto lg:text-center flex flex-col justify-center items-center">
+      <div className="max-w-7xl  h-full relative lg:w-[76%] mx-auto lg:text-center flex flex-col justify-center items-center">
         <div className="flex items-center justify-center w-full mt-8 md:mt-24">
           <FadeContent blur duration={1200}>
             <div
@@ -20,7 +20,7 @@ const Header = () => {
               <img
                 src="./ha.png"
                 alt="Profile"
-                className="relative z-10 object-contain w-full h-auto"
+                className="relative min z-10 lg:h-[400px] object-contain w-full h-auto"
               />
             </div>
           </FadeContent>
@@ -34,18 +34,19 @@ const Header = () => {
         />
 
         <AnimatedContent delay={0.3}>
-          <p className="max-w-6xl mb-5 font-semibold lg:mb-10 md:text-lg">
+          <p className=" mb-5 lg:mb-10 font-medium md:text-lg">
             {" "}
             I specialize in creating fast, responsive, and scalable web
             applications using{" "}
             <span className="px-2 py-1 mx-2 font-bold text-white rounded-sm bg-primary">
-              React, Node.js, and MongoDB{" "}
+              React • Next.js • Node.js • MongoDB • PostgreSQL{" "}
+              {/* React, Node.js,, MongoDB PostgreSQL{" "} */}
             </span>
             building secure, high-performance web applications with clean
             architecture that bridges intuitive user interfaces with scalable
             backend systems
           </p>
-       
+
           <div
             data-aos="fade-up"
             data-aos-duration="1000"
